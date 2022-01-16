@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MonitorLight"
+             x:Class="MonitorLight.MainPage">
+    <StackLayout x:Name="stackLayout">
+
+        <Label x:Name="Reminder" Text="Push to start" FontSize="40" TextColor="Black" VerticalTextAlignment="Start" HorizontalTextAlignment="Center"/>
+
+        <Button x:Name="StartButton"
+                Text="On"  
+                FontSize="Large"
+                HorizontalOptions="Center"
+                WidthRequest="160"
+                HeightRequest="128"
+                BackgroundColor="Green" 
+                Clicked ="StartButton_Clicked"/>
+
+        <Button x:Name="StopButton"  
+                Text="Off"
+                HorizontalOptions="Center"
+                WidthRequest="160"
+                HeightRequest="128"
+                FontSize="Large"  
+                BackgroundColor="Red"   
+                Clicked="StopButton_Clicked"/>
+
+        <Label x:Name="ColorChoiceLabel" Text="Select color" FontSize="40" TextColor="Black" VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
+
+        <Grid x:Name="ColorsGrid" HorizontalOptions="Center" VerticalOptions="End">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="128" />
+                <RowDefinition Height="128" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160" />
+                <ColumnDefinition Width="160" />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="RedButton"
+                Text="RED"  
+                FontSize="Large"
+                Grid.Row="0" 
+                Grid.Column="0"
+                BackgroundColor="Red" 
+                Clicked="RedButton_Clicked"    />
+
+            <Button x:Name="YellowButton"
+                Text="YELLOW"  
+                FontSize="Large"
+                Grid.Row="0" 
+                Grid.Column="1"
+                BackgroundColor="Yellow"
+                Clicked ="YellowButton_Clicked"/>
+
+            <Button x:Name="GreenButton"
+                Text="GREEN"  
+                FontSize="Large"
+                Grid.Row="1" 
+                Grid.Column="0"
+                BackgroundColor="Green" 
+                Clicked ="GreenButton_Clicked"/>
+
+            <Button x:Name="BlueButton"
+                Text="BLUE"  
+                FontSize="Large"
+                Grid.Row="1" 
+                Grid.Column="1"              
+                BackgroundColor="Blue" 
+                Clicked ="BlueButton_Clicked"/>
+
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>
+
+    
